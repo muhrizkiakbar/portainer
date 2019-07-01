@@ -1,0 +1,33 @@
+>> bikin project baru
+    - bikin folder
+    - copy file docker-compose.yml
+    - copy file Dockerfile
+    - lalu buat file isinya kosong Gemfile dan Gemfile.lock
+    isi nya di Gemfile
+        source 'https://rubygems.org'
+        gem 'rails', '~>5'
+    
+    lalu jalankan command
+        - docker-compose run web rails new . --force --no-deps --database=mysql
+        - docker-compose build 
+        - docker-compose up -d
+
+>> jalan kan docker
+    - sudo su
+    - service docker start
+    stopped
+    - service docker stop
+
+>> jalankan dlu portainer
+    - masuk folder portainer
+    - jalankan di terminal
+    - docker-compose up -d
+    - lalu login
+
+    -> pilih endpoint nya -> primary
+        - click stacks
+        - pilih billingsystem
+        - lalu centang semua nya
+            * bila web container kd mau running (stopped) apa bila sdh dijalankan
+              maka hapus file server.pid di project billing sistem di tmp/pids/server.pid
+
